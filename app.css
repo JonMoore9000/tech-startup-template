@@ -1,0 +1,300 @@
+* {
+    box-sizing: border-box;
+    transition: linear .15s;
+    font-family: 'Rubik';
+}
+
+:root {
+    --primary: #493869;
+    --secondary: #893b79;
+    --accent: #fb8500;
+    --light: #8ecae6;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 40px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+h3, h4 {
+    color: var(--primary)
+}
+
+#main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+p {
+    color: #484848
+}
+
+#nav {
+    position: fixed;
+    top: 10px;
+    max-width: 1200px;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
+
+#nav .container {
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid var(--secondary);
+    background: #fff;
+}
+
+#nav .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-wrapper {
+    text-align: right;
+}
+
+#nav a {
+    color: var(--primary);
+    padding: 10px 20px 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid transparent
+}
+
+#nav a:hover {
+    border: 1px solid var(--secondary)
+}
+
+.logo-wrapper img {
+    width: 50px
+}
+
+#hero-section {
+    padding: 250px 40px 150px 40px;
+    border-radius:  0 0 100px 100px;
+    background-image: url(/asseets/polygon.jpg);
+}
+
+#hero-section .container {
+    max-width: 1200px
+}
+
+#hero-section h1, #hero-section p {
+    color: #fff;
+}
+
+#hero-section p {
+    width: 60%;
+    font-size: 18px;
+}
+
+#main section {
+    margin: 150px 0;
+}
+
+#main section img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#about .row {
+    align-items: center;
+}
+
+#services .row,
+#process .row {
+    justify-content: space-between;
+    align-items: center;
+}
+
+#services p,
+#process p {
+    margin-bottom: 0;
+}
+
+.service {
+    padding: 120px 20px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--secondary);
+    width: 24%;
+}
+
+.cta-block {
+    padding: 120px 60px;
+    text-align: center;
+    background: rgba(73, 56, 105, .2);
+    border-radius: 15px;
+}
+
+.cta-block h2 {
+    font-size: 50px;
+}
+
+.cta-block p {
+    font-size: 20px;
+}
+
+.cta-block a {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    color: #fff;
+    background: var(--secondary);
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.cta-block a:hover {
+    background: var(--primary);
+}
+
+.step {
+    padding: 50px 20px 20px;
+    border-radius: 15px;
+    border: 1px solid var(--secondary);
+    width: 49%;
+    margin-bottom: 2%;
+    position: relative;
+    margin-top: 20px;
+}
+
+.step span {
+    position: absolute;
+    left: 20px;
+    top: -18px;
+    padding: 5px 15px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 1px solid var(--secondary);
+    background: var(--secondary);
+    color: #fff
+}
+
+.process-image {
+    background-image: url(asseets/tech-process.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    min-height: 500px;
+}
+
+.contact-block {
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--primary);
+    text-align: center;
+}
+
+.contact-block i {
+    color: var(--secondary);
+    text-align: center;
+    font-size: 30px;
+}
+
+.contact-block p {
+    color: #fff;
+    font-size: 24px;
+}
+
+#contact a {
+    text-decoration: none;
+}
+
+.contact-block:hover {
+    box-shadow: 0 1px 10px 2px #aaa;
+    transform: translateY(-5px);
+}
+
+.copyright {
+    text-align: center;
+    color: #ccc;
+    margin: 50px 0 20px 0;
+}
+
+.mobile-menu {
+    display: none;
+    text-align: right;
+}
+
+.mobile-menu i {
+    font-size: 28px;
+    color: var(--secondary);
+    margin-right: 20px;
+}
+
+.dropdown {
+    display: block;
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    top: 85px;
+    left: 0;
+    padding: 20px;
+    width: 100%;
+    border: 1px solid var(--secondary);
+}
+
+.dropdown a {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+}
+
+@media(max-width: 991px) {
+    #nav {
+        width: calc(100% - 20px);
+
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .menu-wrapper, .dropdown {
+        display: none;
+    }
+    #main {
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2, .cta-block h2 {
+        font-size: 30px;
+    }
+    p, .cta-block p {
+        font-size: 16px;
+    }
+    #main section {
+        margin: 50px 0;
+    }
+    #hero-section {
+        padding: 150px 20px 50px 20px;
+        border-radius: 0 0 25px 25px;
+    }
+    #hero-section p {
+        width: 100%
+    }
+    .step, .service {
+        width: 100%
+    }
+    .service {
+        margin-top: 20px
+    }
+    .cta-block {
+        padding: 30px
+    }
+    .process-image {
+        min-height: 250px
+    }
+    .contact-block {
+        margin-bottom: 20px;
+    }
+}
